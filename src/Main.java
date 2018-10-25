@@ -1,5 +1,9 @@
 import com.sun.xml.internal.xsom.impl.scd.Step;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
@@ -53,14 +57,33 @@ public class Main {
         Foo<String, String> grade = new Foo<> ("Hellt Wtrld!", "A");
 
         //Q11
+        System.out.println("Q11");
         Stream<List<String>> iStr= Stream.of(
                 Arrays.asList ("1", "aaa"),
                 Arrays.asList ("2", null));
-        Stream<String> nInSt = iStr.flatMapToInt((x) -> {
-            return x.stream();
-        });
+        Stream<String> nInSt = iStr.flatMap((x) -> x.stream());
          nInSt.forEach (System.out :: print);
+        System.out.println();
 
+         //Q12
+      /*  Path file = Paths.get("course.txt");
+        try (Stream<String> lines = Files.lines(file)) {
+            lines.forEach(s -> System.out.println(s));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            List<String> lines = Files.readAllLines(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
+        //Q17
+        System.out.println("Q17:");
+        Book b1 = new Book(101, "java pro");
+        Book b2 = new Book(102, "java pro");
+        System.out.println(b1.equals(b2));
     }
 
 
