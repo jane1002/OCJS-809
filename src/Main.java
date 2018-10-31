@@ -88,16 +88,27 @@ public class Main {
 
         //Q
         // result : Exception in thread "main" java.lang.ClassCastException: Vehicle2 cannot be cast to java.lang.Comparable
-        TreeSet<Vehicle2> vehicles = new TreeSet <> ();
+        /*TreeSet<Vehicle2> vehicles = new TreeSet <> ();
         vehicles.add(new Vehicle2 (10123, "Ftrd"));
         vehicles.add(new Vehicle2 (10124, "BMW"));
-        System.out.println(vehicles);
+        System.out.println(vehicles);*/
 
         //Q54
         List<Integer> codes = Arrays.asList(10, 20);
         UnaryOperator<Integer> uo = s -> s + 10;
         codes.replaceAll(uo);
         codes.forEach(num -> System.out.println(num));
+
+        //Q96
+        String message = "Hi everyone!";
+        System.out.println("message = " + message.replace("e", "X"));
+
+        //Q103
+        Test2 t = new Test2();
+            // insert code here to write field variables
+        t.fvar = 200;
+        Test2.cvar = 400;
+
     }
 
 
