@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+import java.util.TreeSet;
 import java.util.concurrent.ForkJoinPool;
 import java.util.function.*;
 import java.util.stream.IntStream;
@@ -84,6 +85,13 @@ public class Main {
         Book b1 = new Book(101, "java pro");
         Book b2 = new Book(102, "java pro");
         System.out.println(b1.equals(b2));
+
+        //Q
+        // result : Exception in thread "main" java.lang.ClassCastException: Vehicle2 cannot be cast to java.lang.Comparable
+        TreeSet<Vehicle2> vehicles = new TreeSet <> ();
+        vehicles.add(new Vehicle2 (10123, "Ftrd"));
+        vehicles.add(new Vehicle2 (10124, "BMW"));
+        System.out.println(vehicles);
     }
 
 
