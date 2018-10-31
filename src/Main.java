@@ -92,6 +92,12 @@ public class Main {
         vehicles.add(new Vehicle2 (10123, "Ftrd"));
         vehicles.add(new Vehicle2 (10124, "BMW"));
         System.out.println(vehicles);
+
+        //Q54
+        List<Integer> codes = Arrays.asList(10, 20);
+        UnaryOperator<Integer> uo = s -> s + 10;
+        codes.replaceAll(uo);
+        codes.forEach(num -> System.out.println(num));
     }
 
 
