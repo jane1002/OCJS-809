@@ -109,6 +109,21 @@ public class Main {
         t.fvar = 200;
         Test2.cvar = 400;
 
+        //Q124
+        char x = 8;
+        int z = '8';
+        System.out.println(doMsg(x));
+        System.out.print(doMsg(z));
+
+
+    }
+
+    public static String doMsg(char x) {
+        return "Good Day!";
+    }
+
+    public static String doMsg(int y) {
+        return "Good Luck!";
     }
 
 
